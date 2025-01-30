@@ -163,10 +163,7 @@
 
   const switchInput = document.getElementById('switch');
 
-  switchInput.addEventListener('change', () => {
-    document.body.classList.toggle('dark-background');
-  });
-  
-
+  // Set the body to dark mode on load
+  document.body.classList.add('dark-background');
 
 })();
