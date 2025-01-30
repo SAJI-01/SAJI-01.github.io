@@ -19,12 +19,12 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #212529; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #000000; /* Color for headings, subheadings and title throughout the website */
+  --background-color: #000000; /* Changed to black */
+  --default-color: #ffffff; /* Changed to white */
+  --heading-color: #ffffff; /* Changed to white */
   --accent-color: #000000; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --surface-color: #000000; /* Changed to black */
+  --contrast-color: #ffffff; /* Changed to white */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
@@ -39,16 +39,11 @@
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
-.light-background {
-  --background-color: #f9f9f9;
-  --surface-color: #ffffff;
-}
-
 .dark-background {
-  --background-color: #060606;
+  --background-color: #000000;
   --default-color: #ffffff;
   --heading-color: #ffffff;
-  --surface-color: #252525;
+  --surface-color: #000000;
   --contrast-color: #ffffff;
 }
 
@@ -61,8 +56,8 @@
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
 body {
-  color: var(--default-color);
-  background-color: var(--color-dark);
+  color: var(--default-color); /* Remains white */
+  background-color: var(--color-dark); /* This should also be updated */
   font-family: var(--default-font);
 }
 
@@ -157,6 +152,7 @@ h6 {
 .header .logo img {
   max-height: 32px;
   margin-right: 8px;
+  background-color: #000000; /* Added to ensure no transparency */
 }
 
 .header .logo h1 {
@@ -234,7 +230,7 @@ h6 {
   justify-content: center;
   border-radius: 50%;
   transition: 0.3s;
-  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+  background-color: #000000; /* Changed to black */
 }
 
 .navmenu a i:hover,
@@ -268,8 +264,8 @@ h6 {
 
 .navmenu .dropdown>.dropdown-active {
   display: block;
-  background-color: var(--nav-dropdown-background-color);
-  border: 1px solid color-mix(in srgb, var(--nav-dropdown-color), transparent 90%);
+  background-color: var(--nav-dropdown-background-color); /* This should also be updated */
+  border: 1px solid #000000; /* Changed to black */
 }
 
 .mobile-nav-active {
@@ -289,7 +285,7 @@ h6 {
   top: 0;
   bottom: 0;
   right: 0;
-  background-color: var(--nav-mobile-background-color);
+  background-color: var(--nav-mobile-background-color); /* This should also be updated */
   transition: 0.3s;
 }
 
@@ -298,7 +294,7 @@ h6 {
 --------------------------------------------------------------*/
 .footer {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: var(--background-color); /* This should also be updated */
   font-size: 14px;
   padding: 40px 0;
   position: relative;
@@ -396,7 +392,7 @@ h6 {
 }
 
 .scroll-top:hover {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  background-color: #000000; /* Changed to black */
   color: var(--contrast-color);
 }
 
@@ -744,7 +740,8 @@ section,
 # Contact Section
 --------------------------------------------------------------*/
 .contact {
-  background-image: url("../img/contact-bg.png");
+  background-image: url("../img/contact-bg.png"); /* This should also be updated */
+  background-color: #000000; /* Added to ensure background is black */
   background-position: left center;
   background-repeat: no-repeat;
   position: relative;
@@ -759,7 +756,7 @@ section,
 
 .contact:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 30%);
+  background: #000000; /* Changed to black */
   position: absolute;
   bottom: 0;
   top: 0;
@@ -810,8 +807,8 @@ section,
   box-shadow: none;
   border-radius: 0;
   color: var(--default-color);
-  background-color: color-mix(in srgb, var(--background-color), transparent 50%);
-  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+  background-color: #000000; /* Changed to black */
+  border-color: #000000; /* Changed to black */
 }
 
 .contact .php-email-form input[type=text]:focus,
@@ -851,8 +848,8 @@ section,
 .switch {
   --transition: 300ms;
   --transition500: 500ms;
-  --color-dark: #0c0f14;
-  --color-darkGray: #21262e;
+  --color-dark: #000000;
+  --color-darkGray: #000000;
   --color-gray: #52555a;
   --color-offwhite: #cecece;
   --shadow-color: var(--color-dark);
@@ -970,7 +967,7 @@ section,
 }
 
 body {
-  background-color: var(--color-dark);
+  background-color: var(--color-dark); /* This should also be updated */
   color: var(--default-color);
   transition: background-color 0.3s, color 0.3s;
 }
@@ -1017,6 +1014,25 @@ Resize images
 .Compute-Shader-Effects{
     max-width: 120%;
   
+}
+
+html, body {
+  height: 100%; /* Ensure full height */
+  margin: 0; /* Remove default margin */
+}
+
+.main {
+  min-height: 100vh; /* Ensure main section covers full viewport height */
+  background-color: #000000; /* Set background to black */
+}
+
+.portfolio {
+  position: relative; /* Ensure proper positioning */
+  overflow: hidden; /* Prevent overflow */
+}
+
+.isotope-container {
+  height: auto; /* Allow height to adjust automatically */
 }
 
 
