@@ -546,7 +546,7 @@ section,
 }
 
 .portfolio .portfolio-content img {
-  transition: 0.3s;
+  transition: .3s;
 }
 
 .portfolio .portfolio-content .portfolio-info {
@@ -563,47 +563,8 @@ section,
   flex-direction: column;
 }
 
-.portfolio .portfolio-content .portfolio-info h4 {
-  font-size: 18px;
-  mask-border: 0;
-  font-weight: 400;
-  color: #ffffff;
-  display: inline-block;
-}
-
-.portfolio .portfolio-content .portfolio-info p {
-  text-align: center;
-  display: inline-block;
-  font-size: 14px;
-  font-weight: 400;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.portfolio .portfolio-content .portfolio-info .preview-link,
-.portfolio .portfolio-content .portfolio-info .details-link {
-  font-size: 26px;
-  color: #fff;
-  transition: 0.3s;
-  line-height: 1.2;
-}
-
-.portfolio .portfolio-content .portfolio-info .preview-link:hover,
-.portfolio .portfolio-content .portfolio-info .details-link:hover {
-  color: var(--accent-color);
-}
-
-.portfolio .portfolio-content .portfolio-info .details-link {
-  left: 50%;
-  font-size: 34px;
-  line-height: 0;
-}
-
-.portfolio .portfolio-content:hover .portfolio-info {
-  opacity: 1;
-}
-
 .portfolio .portfolio-content:hover img {
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 
 /*--------------------------------------------------------------
@@ -997,24 +958,6 @@ body.dark-background .header-social-links a:hover {
   color: #00bfff; /* Change hover color in dark mode */
 }
 
-/*--------------------------------------------------------------
-Resize images
- */
-
-.Untitled-Project-image {
-    max-width: 100%;
-        height: auto;
-}
-
-.Weighted-Voronoi-Stippling{
-    max-width: 100%;
-        height: auto;
-}
-
-.Compute-Shader-Effects{
-    max-width: 120%;
-  
-}
 
 html, body {
   height: 100%; /* Ensure full height */
@@ -1035,4 +978,48 @@ html, body {
   height: auto; /* Allow height to adjust automatically */
 }
 
+/* Horizontal bar style */
+.portfolio-content .horizontal-bar {
+  width: 100%;
+  height: 4px; /* Adjust height as needed */
+  background-color: var(--accent-color); /* Use your accent color */
+  margin-top: 10px; /* Space between image and bar */
+}
 
+/* Add this new class for rounded images */
+.rounded-image {
+    border-radius: 8px; /* Adjust the value as needed */
+}
+
+
+
+/* Title bar container at the bottom of portfolio images */
+.portfolio .portfolio-content {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px; /* Maintain rounded corners */
+}
+
+/* Title bar styling */
+.portfolio .portfolio-content .title-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+  padding: 10px 15px;
+  transform: translateY(0); /* Always visible */
+}
+
+/* Title text styling */
+.portfolio .portfolio-content .title-bar h4 {
+  color: #ffffff;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Adjust existing hover effect to work with title bar */
+.portfolio .portfolio-content .portfolio-info {
+  bottom: 3px; /* Leave space for title bar */
+}
