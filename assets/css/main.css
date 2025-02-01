@@ -22,7 +22,7 @@
   --background-color: #000000; /* Changed to black */
   --default-color: #ffffff; /* Changed to white */
   --heading-color: #ffffff; /* Changed to white */
-  --accent-color: #000000; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #d0ff00; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #000000; /* Changed to black */
   --contrast-color: #ffffff; /* Changed to white */
 }
@@ -549,13 +549,6 @@ section,
   transition: 0.3s;
 }
 
-.portfolio .portfolio-content .portfolio-info {
-  /* Removed styles for portfolio-info */
-}
-
-.portfolio .portfolio-content:hover .portfolio-info {
-  /*opacity: 1;*/
-}
 
 .portfolio .portfolio-content:hover img {
   transform: scale(1.2);
