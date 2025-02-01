@@ -546,7 +546,7 @@ section,
 }
 
 .portfolio .portfolio-content img {
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .portfolio .portfolio-content .portfolio-info {
@@ -561,6 +561,45 @@ section,
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+.portfolio .portfolio-content .portfolio-info h4 {
+  font-size: 18px;
+  mask-border: 0;
+  font-weight: 400;
+  color: #ffffff;
+  display: inline-block;
+}
+
+.portfolio .portfolio-content .portfolio-info p {
+  text-align: center;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.portfolio .portfolio-content .portfolio-info .preview-link,
+.portfolio .portfolio-content .portfolio-info .details-link {
+  font-size: 26px;
+  color: #fff;
+  transition: 0.3s;
+  line-height: 1.2;
+}
+
+.portfolio .portfolio-content .portfolio-info .preview-link:hover,
+.portfolio .portfolio-content .portfolio-info .details-link:hover {
+  color: var(--accent-color);
+}
+
+.portfolio .portfolio-content .portfolio-info .details-link {
+  left: 50%;
+  font-size: 34px;
+  line-height: 0;
+}
+
+.portfolio .portfolio-content:hover .portfolio-info {
+  /*opacity: 1;*/
 }
 
 .portfolio .portfolio-content:hover img {
@@ -992,7 +1031,7 @@ html, body {
 }
 
 
-
+/*_________________________________*/
 /* Title bar container at the bottom of portfolio images */
 .portfolio .portfolio-content {
   position: relative;
