@@ -5,20 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="356ef3eb-2c7a-4db9-8745-38d57c03f0b0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/1ime002.github.io.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/profile-img.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/portfolio/3DGridBasedMovement.gif" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/portfolio/3DGridBasedMovement.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/portfolio/ASCIIRenderer.gif" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/portfolio/ASCIIRenderer.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/portfolio/ComputeShaderEffects.gif" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/portfolio/ComputeShaderEffects.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/portfolio/ForestIsland.gif" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/portfolio/ForestIsland.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/portfolio/UntitledProject.gif" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/portfolio/UntitledProject.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/portfolio/spaghettimonter.gif" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/portfolio/spaghettimonter.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/resume.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/assets/resume.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wobble-gobble.html" beforeDir="false" afterPath="$PROJECT_DIR$/wobble-gobble.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +65,7 @@
       <workItem from="1738427935527" duration="724000" />
       <workItem from="1738966302162" duration="88000" />
       <workItem from="1739730944152" duration="3121000" />
-      <workItem from="1742315124775" duration="8837000" />
+      <workItem from="1742315124775" duration="9587000" />
     </task>
     <servers />
   </component>
