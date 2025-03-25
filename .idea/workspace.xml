@@ -5,20 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="356ef3eb-2c7a-4db9-8745-38d57c03f0b0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ApollonianGasketFractal.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/Projects/ApollonianGasketFractal/ApollonianGasketFractal_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/Projects/ApollonianGasketFractal/ApollonianGasketFractal_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/Projects/ApollonianGasketFractal/ApollonianGasketFractal_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/Projects/UnrealPuzzleGame/Unreal Time Based Game (1).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/Projects/UnrealPuzzleGame/Unreal Time Based Game (2).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/Projects/UnrealPuzzleGame/Unreal Time Based Game (3).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/Projects/UnrealPuzzleGame/Unreal Time Based Game (4).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/Projects/UnrealPuzzleGame/Unreal Time Based Game (5).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/portfolio/ApollonianGasketFractal_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/portfolio/ApollonianGasketFractal_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/portfolio/ApollonianGasketFractal_3.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +83,7 @@
       <workItem from="1739730944152" duration="3121000" />
       <workItem from="1742315124775" duration="9587000" />
       <workItem from="1742365127819" duration="39000" />
-      <workItem from="1742885234194" duration="11419000" />
+      <workItem from="1742885234194" duration="12304000" />
     </task>
     <servers />
   </component>
