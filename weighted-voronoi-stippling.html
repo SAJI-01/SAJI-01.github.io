@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Project Details - Wobble Gobble</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <!-- =======================================================
+    * Template Name: MyPortfolio
+    * Template URL: https://bootstrapmade.com/myportfolio-bootstrap-portfolio-website-template/
+    * Updated: Aug 08 2024 with Bootstrap v5.3.3
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+</head>
+
+<body class="portfolio-details-page">
+
+<header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid  position-relative d-flex align-items-center justify-content-between">
+
+        <a href="index.html" class="logo d-flex align-items-center">
+            <!-- Uncomment the line below if you also wish to use an image logo -->
+            <!-- <img src="assets/img/logo.png" alt=""> -->
+            <h1 class="sitename">MyPortfolio</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+            <ul>
+                <li><a href="">Contact</a></li>
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+        <div class="header-social-links">
+            <a href="assets/resume.pdf" class="Resume" target="_blank" rel="noopener noreferrer"><i class="bi bi-file-earmark-person"></i></a>
+            <a href="https://x.com/1ime002" class="twitter" target="_blank" rel="noopener noreferrer"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.linkedin.com/in/1ime002/" class="linkedin" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
+            <a href="https://www.instagram.com/saji002_/" class="instagram" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
+        </div>
+
+    </div>
+</header>
+
+<main class="main">
+    <!-- Page Title -->
+    <div class="page-title light-background">
+        <div class="container">
+            <h1>Project Details</h1>
+            <nav class="breadcrumbs">
+                <ol>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="current">Project Details</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="row gy-4">
+
+                <div class="col-lg-8">
+                    <div class="portfolio-details-slider swiper init-swiper" data-aos="fade-up" data-aos-delay="100">
+                        <script type="application/json" class="swiper-config">
+                            {
+                                "loop": true,
+                                "speed": 1000,
+                                "autoplay": {
+                                    "delay": 3000
+                                },
+                                "slidesPerView": "auto",
+                                "pagination": {
+                                    "el": ".swiper-pagination",
+                                    "type": "bullets",
+                                    "clickable": true
+                                },
+                                "effect": "slide"
+                            }
+                        </script>
+
+                        <div class="swiper-wrapper align-items-center">
+
+                            <div class="swiper-slide">
+                                <img src="assets/img/Projects/ApollonianGasketFractal/ApollonianGasketFractal_1.png" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/img/Projects/ApollonianGasketFractal/ApollonianGasketFractal_2.png" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/img/Projects/ApollonianGasketFractal/ApollonianGasketFractal_3.png" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <video controls muted width="100%" id="fractalVideo" onended="resumeSwiper()">
+                                    <source src="assets/img/Projects/ApollonianGasketFractal/ApollonianGasketFractal_video.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+                        <h3>Project information</h3>
+                        <ul>
+                            <li><strong>Name</strong>: Apollonian Gasket Fractal</li>
+                            <li><strong>Category</strong>: Graphical Artwork</li>
+                            <li><strong>Platform</strong>: <i class="bi bi-android"></i> Android &nbsp; <i class="bi bi-laptop"></i> PC</li>
+                            <li><strong>Engine</strong>: <img src="assets/img/UnityLogo.png" alt="Unity Logo" style="width: 7%;"> Unity</li>
+                            <li><strong>Project URL</strong>: <a href="https://github.com/SAJI-01/Apollonian-Gasket-Fractal-Unity" target="_blank" rel="noopener noreferrer">Github.com/SAJI-01/Apollonian-Gasket-Fractal-Unity</a></li>
+                            <li><strong>Live Demo</strong>: <a href="https://saji-01.github.io/Apollonian-Gasket-Fractal-Visualization/" target="_blank" rel="noopener noreferrer"><i class="bi bi-play-circle"></i> Real-time Visualization</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="portfolio-description text-start" data-aos="fade-up" data-aos-delay="300">
+                <h2>Apollonian Gasket Fractal - A Mesmerizing Mathematical Visualization</h2>
+                <p>
+                    The Apollonian Gasket Fractal is a captivating visualization of a classical mathematical concept in computational geometry. This project implements an interactive and customizable fractal generator that creates beautiful, intricate patterns based on the principle of circle packing. Users can manipulate various parameters to explore different fractal iterations and see the mathematical beauty unfold in real-time.
+                </p>
+            </div>
+            <div class="portfolio-description text-start" data-aos="fade-up" data-aos-delay="300">
+                <h2>Development Highlights</h2>
+                <p>
+                    This project showcases the intersection of mathematics, computer graphics, and interactive design:
+                </p>
+                <ul>
+                    <li>Implemented a recursive algorithm to generate Apollonian Gasket fractals with customizable depth levels using C# in Unity.</li>
+                    <li>Created an efficient circle generation system that calculates tangent circles using Descartes' theorem and proper coordinate mapping.</li>
+                    <li>Designed an intuitive user interface that allows real-time parameter adjustments, including recursion depth, initial circle configurations, and color schemes.</li>
+                    <li>Optimized performance to handle high recursion depths without compromising framerate or visual quality in 2D Sprites & LineRenderer .</li>
+                    <li>Added screenshot functionality to capture high-resolution images of particularly interesting fractal configurations.</li>
+                    <li>Explored advanced rendering techniques to enhance the visual appeal of the mathematical patterns.</li>
+                    <li>Created an educational component that explains the mathematical principles behind Apollonian Gaskets.</li>
+                    <li>Developed both desktop and mobile versions to make this mathematical art accessible across different platforms.</li>
+                </ul>
+            </div>
+
+
+        </div>
+
+    </section><!-- /Portfolio Details Section -->
+
+</main>
+
+
+<!-- Scroll Top -->
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Preloader -->
+<div id="preloader"></div>
+
+<!-- Vendor JS Files -->
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+<!-- Main JS File -->
+<script src="assets/js/main.js"></script>
+
+<!-- Custom Script for Video Swiper Interaction -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get references to elements
+        const swiperElement = document.querySelector('.portfolio-details-slider.swiper');
+        const videoElement = document.getElementById('fractalVideo');
+
+        // Store swiper instance when initialized
+        let swiperInstance;
+
+        // Function to resume swiper autoplay
+        window.resumeSwiper = function() {
+            if (swiperInstance) {
+                swiperInstance.autoplay.start();
+            }
+        };
+
+        // Wait for swiper to be initialized
+        const checkSwiper = setInterval(function() {
+            if (swiperElement.swiper) {
+                swiperInstance = swiperElement.swiper;
+                clearInterval(checkSwiper);
+
+                // Pause autoplay when video slide is active
+                swiperInstance.on('slideChange', function() {
+                    const activeSlideElement = swiperInstance.slides[swiperInstance.activeIndex];
+                    if (activeSlideElement.contains(videoElement)) {
+                        swiperInstance.autoplay.stop();
+                        videoElement.currentTime = 0;
+                        videoElement.play();
+                    }
+                });
+
+                // Also handle if video is the initial slide
+                const activeSlideElement = swiperInstance.slides[swiperInstance.activeIndex];
+                if (activeSlideElement.contains(videoElement)) {
+                    swiperInstance.autoplay.stop();
+                    videoElement.play();
+                }
+            }
+        }, 100);
+    });
+</script>
+
+</body>
+
+</html>
