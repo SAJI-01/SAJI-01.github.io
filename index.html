@@ -27,6 +27,31 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <!-- Image Slider Styles -->
+  <style>
+    .image-slider {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .image-slider img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .image-slider img.active {
+      opacity: 1;
+      position: relative;
+    }
+  </style>
+
 </head>
 
 <body class="index-page dark-mode">
@@ -195,6 +220,22 @@
             </div>
           </div><!-- End Portfolio Item -->
 
+          <!--Apollonian gasket Fractal-->
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item ArtWorks" style="position: absolute; left: 0px; top: 672px;">
+            <div class="portfolio-content h-100">
+              <a href="https://unknown-coder.itch.io/worship-who">
+                <div class="image-slider">
+                  <img src="assets/img/portfolio/ApollonianGasketFractal_1.png" class="img-fluid rounded-image active" alt="">
+                  <img src="assets/img/portfolio/ApollonianGasketFractal_2.png" class="img-fluid rounded-image" alt="">
+                  <img src="assets/img/portfolio/ApollonianGasketFractal_3.png" class="img-fluid rounded-image" alt="">
+                </div>
+              </a>
+              <div class="title-bar">
+                <h4>Apollonian Gasket Fractal</h4>
+              </div>
+            </div>
+          </div><!-- End Portfolio Item -->
+
 
         </div> <!-- End Isotope Container -->
       </div> <!-- End Isotope Layout -->
@@ -219,4 +260,33 @@
 
 <!-- Main JS File -->
 <script src="assets/js/main.js"></script>
+
+<script>
+// Image slider functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const sliders = document.querySelectorAll('.image-slider');
+  
+  sliders.forEach(slider => {
+    const images = slider.querySelectorAll('img');
+    let currentIndex = 0;
+    
+    // Initial setup - only first image visible
+    images.forEach((img, index) => {
+      if (index !== 0) {
+        img.classList.remove('active');
+      }
+    });
+    
+    // Function to rotate images
+    function rotateImages() {
+      images[currentIndex].classList.remove('active');
+      currentIndex = (currentIndex + 1) % images.length;
+      images[currentIndex].classList.add('active');
+    }
+    
+    // Set interval to rotate images every 2 seconds
+    setInterval(rotateImages, 2000);
+  });
+});
+</script>
 </body>
