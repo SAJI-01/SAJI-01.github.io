@@ -378,7 +378,6 @@ h6 {
   right: 15px;
   bottom: -15px;
   z-index: 99999;
-  background-color: var(--accent-color);
   width: 44px;
   height: 44px;
   border-radius: 50px;
@@ -387,7 +386,7 @@ h6 {
 
 .scroll-top i {
   font-size: 24px;
-  color: var(--contrast-color);
+  color: white;
   line-height: 0;
 }
 
