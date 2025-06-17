@@ -516,13 +516,17 @@ section,
   margin: 0 10px;
   line-height: 1;
   margin-bottom: 5px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease;
 }
 
-.portfolio .portfolio-filters li:hover,
+.portfolio .portfolio-filters li:hover{
+  color: #bce802;
+  transform: scale(1.1);
+}
 .portfolio .portfolio-filters li.filter-active {
-  border-bottom: 2px solid var(--default-color);
+ border-bottom: 3px solid var(--accent-color);
   padding-bottom: 3px;
+
 }
 
 .portfolio .portfolio-filters li:first-child {
@@ -938,11 +942,11 @@ body.dark-background .header-social-links a {
 
 /* Optional: Change icon color on hover */
 .header-social-links a:hover {
-  color: #007bff; /* Change to accent color on hover */
+  color: #bce802; /* Change to accent color on hover */
 }
 
 body.dark-background .header-social-links a:hover {
-  color: #00bfff; /* Change hover color in dark mode */
+  color: #bce802; /* Change hover color in dark mode */
 }
 
 

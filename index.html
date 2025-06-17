@@ -50,6 +50,20 @@
       opacity: 1;
       position: relative;
     }
+
+    .header-social-links {
+      display: flex;
+    }
+      /*on hover make it text come out of image transition */
+    .header-social-links a {
+        color: #fff;
+        transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .header-social-links a:hover {
+        color: #f0f0f0;
+        transform: scale(1.1);
+    }
   </style>
 
 </head>
@@ -73,10 +87,10 @@
     </nav>
 
     <div class="header-social-links">
-      <a href="assets/resume.pdf" class="Resume" target="_blank" rel="noopener noreferrer"><i class="bi bi-file-earmark-person"></i></a>
-      <a href="https://x.com/1ime002" class="twitter" target="_blank" rel="noopener noreferrer"><i class="bi bi-twitter-x"></i></a>
-      <a href="https://www.linkedin.com/in/1ime002/" class="linkedin" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
-      <a href="https://www.instagram.com/saji002_/" class="instagram" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
+      <a href="https://x.com/1ime002" target="_blank" rel="noopener noreferrer"><i class="bi bi-twitter"></i></a>
+      <a href="https://www.linkedin.com/in/1ime002/" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
+      <a href="https://www.instagram.com/saji002_/" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
+      <a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer"><i class="bi bi-file-earmark-person"></i> Resume</a>
     </div>
 
   </div>
@@ -98,13 +112,14 @@
             <h3>Game Projects</h3>
             <div class="mb-4"></div>
           </div>
+
           <div class="col-lg-5 text-center text-lg-end">
             <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
               <li data-filter="*" class="filter-active">All</li>
               <li data-filter=".Games">Games</li>
               <li data-filter=".ArtWorks">Art Works</li>
               <li data-filter=".Projects">Projects</li>
-              <li><a href="about.html" style="color: #ffffff;">About</a></li>
+              <li> <a href="about.html" style="color: #ffffff;" >About</a></li>
             </ul><!-- End Portfolio Filters -->
           </div>
         </div>
@@ -195,7 +210,7 @@
               </div>
             </div>
           </div><!-- End Portfolio Item -->
-          
+
             <!--Artwork 4 Cube Puzzle Time Travel Game-->
           <div class="col-lg-4 col-md-6 portfolio-item isotope-item Games" style="position: absolute; left: 0px; top: 672px;">
             <div class="portfolio-content h-100">
@@ -258,35 +273,35 @@
 <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-<!-- Main JS File -->
-<script src="assets/js/main.js"></script>
-
 <script>
 // Image slider functionality
 document.addEventListener('DOMContentLoaded', function() {
-  const sliders = document.querySelectorAll('.image-slider');
-  
-  sliders.forEach(slider => {
-    const images = slider.querySelectorAll('img');
-    let currentIndex = 0;
-    
-    // Initial setup - only first image visible
-    images.forEach((img, index) => {
-      if (index !== 0) {
-        img.classList.remove('active');
-      }
-    });
-    
-    // Function to rotate images
-    function rotateImages() {
-      images[currentIndex].classList.remove('active');
-      currentIndex = (currentIndex + 1) % images.length;
-      images[currentIndex].classList.add('active');
-    }
-    
-    // Set interval to rotate images every 2 seconds
-    setInterval(rotateImages, 2000);
-  });
+const sliders = document.querySelectorAll('.image-slider');
+
+sliders.forEach(slider => {
+const images = slider.querySelectorAll('img');
+let currentIndex = 0;
+
+// Initial setup - only first image visible
+images.forEach((img, index) => {
+if (index !== 0) {
+img.classList.remove('active');
+}
+});
+
+// Function to rotate images
+function rotateImages() {
+images[currentIndex].classList.remove('active');
+currentIndex = (currentIndex + 1) % images.length;
+images[currentIndex].classList.add('active');
+}
+
+// Set interval to rotate images every 2 seconds
+setInterval(rotateImages, 2000);
+});
 });
 </script>
+
+<!-- Main JS File -->
+<script src="assets/js/main.js"></script>
 </body>
