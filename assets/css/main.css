@@ -112,34 +112,214 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Global Header
+# Enhanced Global Header
 --------------------------------------------------------------*/
 .header {
-  color: var(--default-color);
-  background-color: var(--background-color);
-  padding: 15px 0;
-  transition: all 0.5s;
-  z-index: 997;
+    color: var(--default-color);
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 16px 0;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    z-index: 997;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
 
+/* Scrolled header state */
+.header.scrolled {
+    padding: 12px 0;
+    background: rgba(0, 0, 0, 0.95);
+    border-bottom-color: rgba(208, 255, 0, 0.15);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Header container with better spacing */
+.header .container-fluid {
+    padding: 0 40px;
+}
+
+@media (max-width: 768px) {
+    .header .container-fluid {
+        padding: 0 20px;
+    }
+}
+
+/* Logo Section */
 .header .logo {
-  line-height: 1;
+    line-height: 1;
+    position: relative;
+    padding: 8px 16px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.header .logo::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 50px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+}
+
+.header .logo:hover::before {
+    opacity: 1;
+}
+
+.header .logo:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(208, 255, 0, 0.15);
 }
 
 .header .logo img {
-  max-height: 32px;
-  margin-right: 8px;
-  background-color: #000000; /* Added to ensure no transparency */
+    max-height: 32px;
+    margin-right: 8px;
+    background-color: transparent;
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 1;
 }
 
+.header .logo:hover img {
+    transform: rotate(-5deg) scale(1.05);
+}
+
+/* Logo Text Styling */
 .header .logo h1 {
-  font-size: 30px;
-  margin: 0;
-  font-weight: 700;
-  color: var(--heading-color);
+    font-size: 28px;
+    margin: 0;
+    font-weight: 700;
+    color: var(--heading-color);
+    background: linear-gradient(135deg, #ffffff 0%, #d0ff00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+    letter-spacing: -0.5px;
 }
 
+.header .logo:hover h1 {
+    background: linear-gradient(135deg, #d0ff00 0%, #ffffff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 0px;
+}
 
+/* Glowing effect on logo */
+.header .logo::after {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(135deg, rgba(208, 255, 0, 0.2), rgba(255, 255, 255, 0.1));
+    border-radius: 50px;
+    filter: blur(10px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.header .logo:hover::after {
+    opacity: 1;
+}
+
+/* Animated underline effect for logo */
+.header .logo h1::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #d0ff00, transparent);
+    transition: width 0.4s ease;
+}
+
+.header .logo:hover h1::after {
+    width: 100%;
+}
+
+/* Responsive logo */
+@media (max-width: 768px) {
+    .header .logo h1 {
+        font-size: 24px;
+    }
+
+    .header .logo {
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header .logo h1 {
+        font-size: 20px;
+    }
+
+    .header .logo {
+        padding: 4px 10px;
+    }
+}
+
+/* Header entrance animation */
+.header {
+    animation: slideDown 0.6s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Optional: Add a subtle gradient background overlay */
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+            90deg,
+            transparent 0%,
+            rgba(208, 255, 0, 0.3) 50%,
+            transparent 100%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.header:hover::before {
+    opacity: 1;
+}
+
+/* Sticky header smooth transition */
+.header.sticky-top {
+    position: sticky;
+    top: 0;
+}
+
+/* Better spacing between logo and social links */
+.header .d-flex.justify-content-between {
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .header .d-flex.justify-content-between {
+        gap: 10px;
+    }
+}
 /*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/
@@ -267,7 +447,7 @@ h6 {
 .page-title {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 120px 0;
+  padding: 100px 0 20px 0;
   text-align: center;
   position: relative;
 }
@@ -656,25 +836,6 @@ section,
 # Dark Mode Social Media Icons
  */
 
-.header-social-links a {
-  margin: 0 10px;
-  color: #333; /* Light mode color */
-  font-size: 24px; /* Adjust size as needed */
-}
-
-/* Dark mode styles */
-body.dark-background .header-social-links a {
-  color: #fff; /* Change to white or another light color */
-}
-
-/* Optional: Change icon color on hover */
-.header-social-links a:hover {
-  color: #bce802; /* Change to accent color on hover */
-}
-
-body.dark-background .header-social-links a:hover {
-  color: #bce802; /* Change hover color in dark mode */
-}
 
 
 html, body {
@@ -731,24 +892,6 @@ width: 100%;
     position: relative;
 }
 
-.header-social-links {
-    display: flex;
-}
-/*on hover make it text come out of image transition */
-.header-social-links a {
-    color: #fff;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.header-social-links a:hover {
-    color: #f0f0f0;
-    transform: scale(1.1);
-}
-@media (max-width: 768px) {
-    .resume-text {
-        display: none;
-    }
-}
 /*_________________________________*/
 /* Title bar container at the bottom of portfolio images */
 .portfolio .portfolio-content {
@@ -1022,4 +1165,196 @@ width: 100%;
 
 .slider-bar.animating {
     animation: smoothStretch 0.35s ease-in-out;
+}
+
+/*---------------------==================*/
+
+/* Enhanced Social Links Container */
+.header-social-links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Individual Social Link Styling */
+.header-social-links a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 14px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* Icon styling */
+.header-social-links a i {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+    z-index: 2;
+    position: relative;
+}
+
+/* Resume text styling */
+.header-social-links a .resume-text {
+    font-size: 14px;
+    font-weight: 500;
+    z-index: 2;
+    position: relative;
+}
+
+/* Hover background effect */
+.header-social-links a::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 50px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.header-social-links a:hover::before {
+    opacity: 1;
+}
+
+/* Hover effects */
+.header-social-links a:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(208, 255, 0, 0.2);
+}
+
+.header-social-links a:hover i {
+    transform: scale(1.15);
+}
+
+/* Active/Click effect */
+.header-social-links a:active {
+    transform: translateY(0px) scale(0.95);
+}
+
+/* Specific icon colors on hover */
+.header-social-links a:hover:nth-child(1) {
+    /* Twitter/X */
+    color: #ffffff;
+    box-shadow: 0 4px 16px rgba(255, 255, 255, 0.3);
+}
+
+.header-social-links a:hover:nth-child(2) {
+    /* LinkedIn */
+    color: #0A66C2;
+    box-shadow: 0 4px 16px rgba(10, 102, 194, 0.3);
+}
+
+.header-social-links a:hover:nth-child(3) {
+    /* Instagram */
+    color: #E4405F;
+    box-shadow: 0 4px 16px rgba(228, 64, 95, 0.3);
+}
+
+.header-social-links a:hover:nth-child(4) {
+    /* Resume */
+    color: #d0ff00;
+    box-shadow: 0 4px 16px rgba(208, 255, 0, 0.3);
+}
+
+ Resume button special styling
+.header-social-links a:last-child {
+    padding: 10px 16px;
+    background: rgba(208, 255, 0, 0.1);
+    border: 1px solid rgba(208, 255, 0, 0.2);
+}
+
+.header-social-links a:last-child:hover {
+    background: rgba(208, 255, 0, 0.15);
+    border-color: rgba(208, 255, 0, 0.4);
+}
+
+/* Separator between icons (optional subtle divider) */
+.header-social-links a:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -4px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.header-social-links:hover a:not(:last-child)::after {
+    opacity: 1;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .header-social-links {
+        gap: 4px;
+        padding: 4px;
+    }
+
+    .header-social-links a {
+        padding: 8px 10px;
+        font-size: 16px;
+    }
+
+    .header-social-links a i {
+        font-size: 16px;
+    }
+
+    .resume-text {
+        display: none;
+    }
+
+    .header-social-links a:last-child {
+        padding: 8px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-social-links {
+        gap: 2px;
+    }
+
+    .header-social-links a {
+        padding: 7px 9px;
+    }
+}
+
+/* Smooth entrance animation on page load */
+.header-social-links a {
+    animation: slideInRight 0.5s ease-out backwards;
+}
+
+.header-social-links a:nth-child(1) { animation-delay: 0.1s; }
+.header-social-links a:nth-child(2) { animation-delay: 0.15s; }
+.header-social-links a:nth-child(3) { animation-delay: 0.2s; }
+.header-social-links a:nth-child(4) { animation-delay: 0.25s; }
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
