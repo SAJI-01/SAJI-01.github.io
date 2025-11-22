@@ -236,14 +236,7 @@ document.addEventListener('DOMContentLoaded', function() {
         activeIndex = index;
         updateSliderPosition(index);
 
-        // Check if it's the About link
-        const aboutLink = filterItems[index].querySelector('a[href="about.html"]');
-        if (aboutLink) {
-            // Let the link navigate naturally
-            return;
-        }
-
-        // Trigger isotope filter for other items
+        // Trigger isotope filter
         const filterValue = filterItems[index].getAttribute('data-filter');
         if (filterValue && window.initIsotope) {
             window.initIsotope.arrange({ filter: filterValue });
@@ -329,14 +322,6 @@ document.addEventListener('DOMContentLoaded', function() {
             item.style.transform = '';
         });
 
-        // Check if it's the About link before setting active
-        const aboutLink = filterItems[closestIndex].querySelector('a[href="about.html"]');
-        if (aboutLink) {
-            // Navigate to about page
-            window.location.href = 'about.html';
-            return;
-        }
-
         setActiveFilter(closestIndex);
     }
 
@@ -344,16 +329,6 @@ document.addEventListener('DOMContentLoaded', function() {
     filterItems.forEach((item, index) => {
         item.addEventListener('click', (e) => {
             if (!isDragging) {
-                // Check if it's the About link
-                const aboutLink = item.querySelector('a[href="about.html"]');
-                if (aboutLink) {
-                    // Let the link work naturally, just update the slider visually
-                    setActiveFilter(index);
-                    // Don't prevent default - let link navigate
-                    return;
-                }
-
-                // For other filters, prevent default and set active
                 e.preventDefault();
                 setActiveFilter(index);
             }
@@ -392,33 +367,10 @@ document.addEventListener('DOMContentLoaded', function() {
             window.initIsotope = new Isotope(container, {
                 itemSelector: '.isotope-item',
                 layoutMode: 'masonry',
-                filter: '*',
+                filter: '.Games, .ArtWorks, .Projects', // Initial filter
                 sortBy: 'original-order'
             });
         });
     }
-});
 
-/*-----------Force Isotope Layout on Page Load ---------------------*/
-document.addEventListener('DOMContentLoaded', function() {
-    // Wait for images to load before initializing layout
-    const container = document.querySelector('.isotope-container');
-    if (container) {
-        // Small delay to ensure everything is loaded
-        setTimeout(function() {
-            // Trigger Isotope layout
-            if (typeof Isotope !== 'undefined') {
-                const iso = new Isotope(container, {
-                    itemSelector: '.portfolio-item',
-                    layoutMode: 'masonry',
-                    filter: '.Games, .ArtWorks, .Projects'
-                });
-
-                // Force layout after initialization
-                setTimeout(function() {
-                    iso.layout();
-                }, 100);
-            }
-        }, 200);
-    }
 });
