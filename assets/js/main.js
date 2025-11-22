@@ -351,9 +351,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-
-
-
     // Event listeners
     filterContainer.addEventListener('mousedown', handleStart);
     document.addEventListener('mousemove', handleMove);
