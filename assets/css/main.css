@@ -1,52 +1,50 @@
 :root {
-  --default-font: "Kanit",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Kanit",  sans-serif;
-  --nav-font: "Kanit",  sans-serif;
+    --default-font: "Kanit",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --heading-font: "Kanit",  sans-serif;
+    --nav-font: "Kanit",  sans-serif;
 }
 
-/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+/* Global Colors */
 :root {
-  --background-color: #000000; /* Changed to black */
-  --default-color: #ffffff; /* Changed to white */
-  --heading-color: #ffffff; /* Changed to white */
-  --accent-color: #d0ff00; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #000000; /* Changed to black */
-  --contrast-color: #ffffff; /* Changed to white */
+    --background-color: #000000;
+    --default-color: #ffffff;
+    --heading-color: #ffffff;
+    --accent-color: #d0ff00;
+    --surface-color: #000000;
+    --contrast-color: #ffffff;
 }
-
-/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .dark-background {
-  --background-color: #000000;
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
-  --surface-color: #000000;
-  --contrast-color: #ffffff;
+    --background-color: #000000;
+    --default-color: #ffffff;
+    --heading-color: #ffffff;
+    --surface-color: #000000;
+    --contrast-color: #ffffff;
 }
 
 /* Smooth scroll */
 :root {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
 body {
-  color: var(--default-color); /* Remains white */
-  background-color: var(--background-color); /* This should also be updated */
-  font-family: var(--default-font);
+    color: var(--default-color);
+    background-color: var(--background-color);
+    font-family: var(--default-font);
 }
 
 a {
-  color: var(--accent-color);
-  text-decoration: none;
-  transition: 0.3s;
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: 0.3s;
 }
 
 a:hover {
-  color: color-mix(in srgb, var(--accent-color), transparent 25%);
-  text-decoration: none;
+    color: color-mix(in srgb, var(--accent-color), transparent 25%);
+    text-decoration: none;
 }
 
 h1,
@@ -55,60 +53,58 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--heading-color);
-  font-family: var(--heading-font);
+    color: var(--heading-color);
+    font-family: var(--heading-font);
 }
 
-/* PHP Email Form Messages
-------------------------------*/
+/* PHP Email Form Messages */
 .php-email-form .error-message {
-  display: none;
-  background: #df1529;
-  color: #ffffff;
-  text-align: left;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
+    display: none;
+    background: #df1529;
+    color: #ffffff;
+    text-align: left;
+    padding: 15px;
+    margin-bottom: 24px;
+    font-weight: 600;
 }
 
 .php-email-form .sent-message {
-  display: none;
-  color: #ffffff;
-  background: #059652;
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
+    display: none;
+    color: #ffffff;
+    background: #059652;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 24px;
+    font-weight: 600;
 }
 
 .php-email-form .loading {
-  display: none;
-  background: var(--surface-color);
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
+    display: none;
+    background: var(--surface-color);
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 24px;
 }
 
 .php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid var(--accent-color);
-  border-top-color: var(--surface-color);
-  animation: php-email-form-loading 1s linear infinite;
+    content: "";
+    display: inline-block;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    margin: 0 10px -6px 0;
+    border: 3px solid var(--accent-color);
+    border-top-color: var(--surface-color);
+    animation: php-email-form-loading 1s linear infinite;
 }
 
 @keyframes php-email-form-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /*--------------------------------------------------------------
@@ -126,7 +122,6 @@ h6 {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
 
-/* Scrolled header state */
 .header.scrolled {
     padding: 12px 0;
     background: rgba(0, 0, 0, 0.95);
@@ -134,7 +129,6 @@ h6 {
     box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
 }
 
-/* Header container with better spacing */
 .header .container-fluid {
     padding: 0 40px;
 }
@@ -188,7 +182,6 @@ h6 {
     transform: rotate(-5deg) scale(1.05);
 }
 
-/* Logo Text Styling */
 .header .logo h1 {
     font-size: 28px;
     margin: 0;
@@ -212,7 +205,6 @@ h6 {
     letter-spacing: 0px;
 }
 
-/* Glowing effect on logo */
 .header .logo::after {
     content: '';
     position: absolute;
@@ -229,7 +221,6 @@ h6 {
     opacity: 1;
 }
 
-/* Animated underline effect for logo */
 .header .logo h1::after {
     content: '';
     position: absolute;
@@ -245,12 +236,10 @@ h6 {
     width: 100%;
 }
 
-/* Responsive logo */
 @media (max-width: 768px) {
     .header .logo h1 {
         font-size: 24px;
     }
-
     .header .logo {
         padding: 6px 12px;
     }
@@ -260,13 +249,11 @@ h6 {
     .header .logo h1 {
         font-size: 20px;
     }
-
     .header .logo {
         padding: 4px 10px;
     }
 }
 
-/* Header entrance animation */
 .header {
     animation: slideDown 0.6s ease-out;
 }
@@ -282,7 +269,6 @@ h6 {
     }
 }
 
-/* Optional: Add a subtle gradient background overlay */
 .header::before {
     content: '';
     position: absolute;
@@ -290,12 +276,7 @@ h6 {
     left: 0;
     right: 0;
     height: 1px;
-    background: linear-gradient(
-            90deg,
-            transparent 0%,
-            rgba(208, 255, 0, 0.3) 50%,
-            transparent 100%
-    );
+    background: linear-gradient(90deg, transparent 0%, rgba(208, 255, 0, 0.3) 50%, transparent 100%);
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -304,13 +285,11 @@ h6 {
     opacity: 1;
 }
 
-/* Sticky header smooth transition */
 .header.sticky-top {
     position: sticky;
     top: 0;
 }
 
-/* Better spacing between logo and social links */
 .header .d-flex.justify-content-between {
     gap: 20px;
 }
@@ -320,164 +299,164 @@ h6 {
         gap: 10px;
     }
 }
+
 /*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/
 .footer {
-  color: var(--default-color);
-  background-color: var(--background-color); /* This should also be updated */
-  font-size: 14px;
-  padding: 40px 0;
-  position: relative;
+    color: var(--default-color);
+    background-color: var(--background-color);
+    font-size: 14px;
+    padding: 40px 0;
+    position: relative;
 }
 
 .footer .copyright p {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .footer .social-links {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 
 .footer .social-links a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
-  font-size: 16px;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
-  margin: 0 5px;
-  transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
+    font-size: 16px;
+    color: color-mix(in srgb, var(--default-color), transparent 50%);
+    margin: 0 5px;
+    transition: 0.3s;
 }
 
 .footer .social-links a:hover {
-  color: var(--accent-color);
-  border-color: var(--accent-color);
+    color: var(--accent-color);
+    border-color: var(--accent-color);
 }
 
 .footer .credits {
-  margin-top: 10px;
-  font-size: 13px;
-  text-align: center;
+    margin-top: 10px;
+    font-size: 13px;
+    text-align: center;
 }
 
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
 #preloader {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  overflow: hidden;
-  background-color: var(--background-color);
-  transition: all 0.6s ease-out;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    overflow: hidden;
+    background-color: var(--background-color);
+    transition: all 0.6s ease-out;
 }
 
 #preloader:before {
-  content: "";
-  position: fixed;
-  top: calc(50% - 30px);
-  left: calc(50% - 30px);
-  border: 6px solid var(--accent-color);
-  border-top-color: color-mix(in srgb, var(--accent-color), transparent 90%);
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  animation: animate-preloader 1s linear infinite;
+    content: "";
+    position: fixed;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
+    border: 6px solid var(--accent-color);
+    border-top-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: animate-preloader 1s linear infinite;
 }
 
 @keyframes animate-preloader {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /*--------------------------------------------------------------
 # Scroll Top Button
 --------------------------------------------------------------*/
 .scroll-top {
-  position: fixed;
-  visibility: hidden;
-  opacity: 0;
-  right: 15px;
-  bottom: -15px;
-  z-index: 99999;
-  width: 44px;
-  height: 44px;
-  border-radius: 50px;
-  transition: all 0.4s;
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    right: 15px;
+    bottom: -15px;
+    z-index: 99999;
+    width: 44px;
+    height: 44px;
+    border-radius: 50px;
+    transition: all 0.4s;
 }
 
 .scroll-top i {
-  font-size: 24px;
-  color: white;
-  line-height: 0;
+    font-size: 24px;
+    color: white;
+    line-height: 0;
 }
 
 .scroll-top:hover {
-  background-color: #000000; /* Changed to black */
-  color: var(--contrast-color);
+    background-color: #000000;
+    color: var(--contrast-color);
 }
 
 .scroll-top.active {
-  visibility: visible;
-  opacity: 1;
-  bottom: 15px;
+    visibility: visible;
+    opacity: 1;
+    bottom: 15px;
 }
 
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
 --------------------------------------------------------------*/
 @media screen and (max-width: 768px) {
-  [data-aos-delay] {
-    transition-delay: 0s !important;
-  }
+    [data-aos-delay] {
+        transition-delay: 0s !important;
+    }
 }
 
 /*--------------------------------------------------------------
 # Global Page Titles & Breadcrumbs
 --------------------------------------------------------------*/
 .page-title {
-  color: var(--default-color);
-  background-color: var(--background-color);
-  padding: 100px 0 20px 0;
-  text-align: center;
-  position: relative;
+    color: var(--default-color);
+    background-color: var(--background-color);
+    padding: 100px 0 20px 0;
+    text-align: center;
+    position: relative;
 }
 
 .page-title h1 {
-  font-size: 42px;
-  font-weight: 700;
-  margin-bottom: 10px;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 10px;
 }
 
 .page-title .breadcrumbs ol {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  justify-content: center;
-  padding: 0;
-  margin: 0;
-  font-size: 16px;
-  font-weight: 400;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
 }
 
 .page-title .breadcrumbs ol li+li {
-  padding-left: 10px;
+    padding-left: 10px;
 }
 
 .page-title .breadcrumbs ol li+li::before {
-  content: "/";
-  display: inline-block;
-  padding-right: 10px;
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
+    content: "/";
+    display: inline-block;
+    padding-right: 10px;
+    color: color-mix(in srgb, var(--default-color), transparent 70%);
 }
 
 /*--------------------------------------------------------------
@@ -485,389 +464,324 @@ h6 {
 --------------------------------------------------------------*/
 section,
 .section {
-  color: var(--default-color);
-  background-color: var(--background-color);
-  padding: 60px 0;
-  scroll-margin-top: 90px;
-  overflow: clip;
+    color: var(--default-color);
+    background-color: var(--background-color);
+    padding: 60px 0;
+    scroll-margin-top: 90px;
+    overflow: clip;
 }
 
 @media (max-width: 1199px) {
-  section,
-  .section {
-    scroll-margin-top: 66px;
-  }
+    section,
+    .section {
+        scroll-margin-top: 66px;
+    }
 }
 
 /*--------------------------------------------------------------
 # Global Section Titles
 --------------------------------------------------------------*/
 .section-title {
-  text-align: center;
-  padding-bottom: 60px;
-  position: relative;
+    text-align: center;
+    padding-bottom: 60px;
+    position: relative;
 }
 
 .section-title h2 {
-  font-size: 32px;
-  font-weight: 400;
-  margin-bottom: 15px;
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 15px;
 }
 
 .section-title p {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 /*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
 .portfolio .portfolio-info h3 {
-  font-size: 24px;
-  margin-bottom: 5px;
+    font-size: 24px;
+    margin-bottom: 5px;
 }
 
 .portfolio .portfolio-info p {
-  font-size: 16px;
-}
-
-.portfolio .portfolio-filters {
-  padding: 0;
-  margin: 0 auto 20px auto;
-  list-style: none;
-}
-
-.portfolio .portfolio-filters li {
-  cursor: pointer;
-  display: inline-block;
-  padding: 0;
-  font-size: 16px;
-  font-weight: 400;
-    line-height: 1;
-    margin: 0 10px 5px;
-    transition: all 0.2s ease;
-}
-
-.portfolio .portfolio-filters li:hover{
-  color: #bce802;
-  transform: scale(1.3);
-}
-
-.portfolio .portfolio-filters li.filter-active {
- border-bottom: 3px solid var(--accent-color);
-  padding-bottom: 3px;
-
-}
-
-.portfolio .portfolio-filters a{
-    color: #ffffff;
-}
-
-.portfolio .portfolio-filters a:hover{
-    color: #bce802;
-    transform: scale(1.3);
-}
-
-.portfolio .portfolio-filters li:first-child {
-  margin-left: 0;
-}
-
-.portfolio .portfolio-filters li:last-child {
-  margin-right: 5px;
-}
-
-@media (max-width: 575px) {
-  .portfolio .portfolio-filters li {
-    font-size: 14px;
-    margin: 0 5px;
-  }
+    font-size: 16px;
 }
 
 .portfolio .portfolio-content {
-  position: relative;
-  overflow: hidden;
+    position: relative;
+    overflow: hidden;
+    border-radius: 14px;
 }
 
-.portfolio .portfolio-content img{
-  transition: 0.5s;
+.portfolio .portfolio-content img {
+    transition: 0.5s;
 }
-
 
 .portfolio .portfolio-content:hover img {
-  transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 /*--------------------------------------------------------------
 # Portfolio Details Section
 --------------------------------------------------------------*/
 .portfolio-details .portfolio-details-slider img {
-  width: 100%;
+    width: 100%;
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination {
-  margin-top: 20px;
-  position: relative;
+    margin-top: 20px;
+    position: relative;
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: color-mix(in srgb, var(--default-color), transparent 85%);
-  opacity: 1;
+    width: 12px;
+    height: 12px;
+    background-color: color-mix(in srgb, var(--default-color), transparent 85%);
+    opacity: 1;
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: var(--accent-color);
+    background-color: var(--accent-color);
 }
 
 .portfolio-details .portfolio-info {
-  background-color: var(--surface-color);
-  padding: 30px;
-  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
+    background-color: var(--surface-color);
+    padding: 30px;
+    box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
 }
 
 .portfolio-details .portfolio-info h3 {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
 }
 
 .portfolio-details .portfolio-info ul {
-  list-style: none;
-  padding: 0;
-  font-size: 15px;
+    list-style: none;
+    padding: 0;
+    font-size: 15px;
 }
 
 .portfolio-details .portfolio-info ul li+li {
-  margin-top: 10px;
+    margin-top: 10px;
 }
 
 .portfolio-details .portfolio-description {
-  padding-top: 30px;
+    padding-top: 30px;
 }
 
 .portfolio-details .portfolio-description h2 {
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 20px;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 20px;
 }
 
 .portfolio-details .portfolio-description p {
-  padding: 0;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+    padding: 0;
+    color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
 
 /*--------------------------------------------------------------
 # Service Details Section
 --------------------------------------------------------------*/
 .service-details .services-list {
-  background-color: var(--surface-color);
-  padding: 10px 30px;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  margin-bottom: 20px;
+    background-color: var(--surface-color);
+    padding: 10px 30px;
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    margin-bottom: 20px;
 }
 
 .service-details .services-list a {
-  display: block;
-  line-height: 1;
-  padding: 8px 0 8px 15px;
-  border-left: 3px solid color-mix(in srgb, var(--default-color), transparent 70%);
-  margin: 20px 0;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  transition: 0.3s;
+    display: block;
+    line-height: 1;
+    padding: 8px 0 8px 15px;
+    border-left: 3px solid color-mix(in srgb, var(--default-color), transparent 70%);
+    margin: 20px 0;
+    color: color-mix(in srgb, var(--default-color), transparent 20%);
+    transition: 0.3s;
 }
 
 .service-details .services-list a.active {
-  color: var(--heading-color);
-  font-weight: 700;
-  border-color: var(--accent-color);
+    color: var(--heading-color);
+    font-weight: 700;
+    border-color: var(--accent-color);
 }
 
 .service-details .services-list a:hover {
-  border-color: var(--accent-color);
+    border-color: var(--accent-color);
 }
 
 .service-details .services-img {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .service-details h3 {
-  font-size: 26px;
-  font-weight: 700;
+    font-size: 26px;
+    font-weight: 700;
 }
 
 .service-details h4 {
-  font-size: 20px;
-  font-weight: 700;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 .service-details p {
-  font-size: 15px;
+    font-size: 15px;
 }
 
 .service-details ul {
-  list-style: none;
-  padding: 0;
-  font-size: 15px;
+    list-style: none;
+    padding: 0;
+    font-size: 15px;
 }
 
 .service-details ul li {
-  padding: 5px 0;
-  display: flex;
-  align-items: center;
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
 }
 
 .service-details ul i {
-  font-size: 20px;
-  margin-right: 8px;
-  color: var(--accent-color);
+    font-size: 20px;
+    margin-right: 8px;
+    color: var(--accent-color);
 }
-
-
 
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
 .contact {
-  background-image: url("../img/contact-bg.png"); /* This should also be updated */
-  background-color: #000000; /* Added to ensure background is black */
-  background-position: left center;
-  background-repeat: no-repeat;
-  position: relative;
+    background-image: url("../img/contact-bg.png");
+    background-color: #000000;
+    background-position: left center;
+    background-repeat: no-repeat;
+    position: relative;
 }
 
 @media (max-width: 640px) {
-  .contact {
-    background-position: center 50px;
-    background-size: contain;
-  }
+    .contact {
+        background-position: center 50px;
+        background-size: contain;
+    }
 }
 
 .contact:before {
-  content: "";
-  background: #000000; /* Changed to black */
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
+    content: "";
+    background: #000000;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 .contact .info-item+.info-item {
-  margin-top: 40px;
+    margin-top: 40px;
 }
 
 .contact .info-item i {
-  background: var(--accent-color);
-  color: var(--contrast-color);
-  font-size: 20px;
-  width: 44px;
-  height: 44px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50px;
-  transition: all 0.3s ease-in-out;
-  margin-right: 15px;
+    background: var(--accent-color);
+    color: var(--contrast-color);
+    font-size: 20px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    margin-right: 15px;
 }
 
 .contact .info-item h3 {
-  padding: 0;
-  font-size: 18px;
-  font-weight: 700;
-  margin-bottom: 5px;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
 }
 
 .contact .info-item p {
-  padding: 0;
-  margin-bottom: 0;
-  font-size: 14px;
+    padding: 0;
+    margin-bottom: 0;
+    font-size: 14px;
 }
 
 .contact .php-email-form {
-  height: 100%;
+    height: 100%;
 }
 
 .contact .php-email-form input[type=text],
 .contact .php-email-form input[type=email],
 .contact .php-email-form textarea {
-  font-size: 14px;
-  padding: 10px 15px;
-  box-shadow: none;
-  border-radius: 0;
-  color: var(--default-color);
-  background-color: #000000; /* Changed to black */
-  border-color: #000000; /* Changed to black */
+    font-size: 14px;
+    padding: 10px 15px;
+    box-shadow: none;
+    border-radius: 0;
+    color: var(--default-color);
+    background-color: #000000;
+    border-color: #000000;
 }
 
 .contact .php-email-form input[type=text]:focus,
 .contact .php-email-form input[type=email]:focus,
 .contact .php-email-form textarea:focus {
-  border-color: var(--accent-color);
+    border-color: var(--accent-color);
 }
 
 .contact .php-email-form input[type=text]::placeholder,
 .contact .php-email-form input[type=email]::placeholder,
 .contact .php-email-form textarea::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
+    color: color-mix(in srgb, var(--default-color), transparent 70%);
 }
 
 .contact .php-email-form button[type=submit] {
-  color: var(--contrast-color);
-  background: var(--accent-color);
-  border: 0;
-  padding: 10px 30px;
-  transition: 0.4s;
-  border-radius: 50px;
+    color: var(--contrast-color);
+    background: var(--accent-color);
+    border: 0;
+    padding: 10px 30px;
+    transition: 0.4s;
+    border-radius: 50px;
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+    background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
 
 #navmenu {
-  display: none;
+    display: none;
 }
 
-
-
 /*--------------------------------------------------------------
-# Dark Mode Social Media Icons
- */
-
-
-
+# Main & Layout
+--------------------------------------------------------------*/
 html, body {
-  height: 100%; /* Ensure full height */
-  margin: 0; /* Remove default margin */
+    height: 100%;
+    margin: 0;
 }
 
 .main {
-  min-height: 100vh; /* Ensure main section covers full viewport height */
-  background-color: #000000; /* Set background to black */
+    min-height: 100vh;
+    background-color: #000000;
 }
 
 .portfolio {
-  position: relative; /* Ensure proper positioning */
-  overflow: hidden; /* Prevent overflow */
+    position: relative;
+    overflow: hidden;
 }
 
 .isotope-container {
-  height: auto; /* Allow height to adjust automatically */
+    height: auto;
 }
 
-/* Horizontal bar style */
-.portfolio-content .horizontal-bar {
-  width: 100%;
-  height: 4px; /* Adjust height as needed */
-  background-color: var(--accent-color); /* Use your accent color */
-  margin-top: 10px; /* Space between image and bar */
-}
-
-/* Add this new class for rounded images */
+/*--------------------------------------------------------------
+# Portfolio Content Styling
+--------------------------------------------------------------*/
 .rounded-image {
-    border-radius: 14px; /* Adjust the value as needed */
+    border-radius: 14px;
 }
 
 .image-slider {
@@ -881,7 +795,7 @@ html, body {
     position: absolute;
     top: 0;
     left: 0;
-width: 100%;
+    width: 100%;
     height: 100%;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
@@ -892,15 +806,7 @@ width: 100%;
     position: relative;
 }
 
-/*_________________________________*/
-/* Title bar container at the bottom of portfolio images */
-.portfolio .portfolio-content {
-    position: relative;
-    overflow: hidden;
-    border-radius: 14px; /* Maintain rounded corners */
-}
-
-/* Title bar styling - adapts to text size, blurred background, rounded */
+/* Title bar at bottom of portfolio images */
 .portfolio .portfolio-content .title-bar {
     position: absolute;
     bottom: 12px;
@@ -909,19 +815,18 @@ width: 100%;
     align-items: center;
     gap: 10px;
     padding: 6px 12px;
-    max-width: calc(100% - 24px); /* stay inside image */
+    max-width: calc(100% - 24px);
     background: rgba(0, 0, 0, 0.35);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
     border-radius: 12px;
     color: #ffffff;
-    transform: translateY(0); /* Always visible */
+    transform: translateY(0);
     box-shadow: 0 0px 20px rgba(0,0,0,0.3), 0 0 5px 0px rgba(0, 0, 0, 0.1);
-    white-space: nowrap; /* keep single-line unless on small screens */
+    white-space: nowrap;
     box-sizing: border-box;
 }
 
-/* Title text styling - scales and truncates if necessary */
 .portfolio .portfolio-content .title-bar h4 {
     color: #ffffff;
     margin: 0;
@@ -934,22 +839,18 @@ width: 100%;
     max-width: 100%;
 }
 
-/* Adjust existing hover effect to work with title bar */
-.portfolio .portfolio-content .portfolio-info {
-    bottom: 3px; /* Leave space for title bar */
-}
-
+/* Engine Logos */
 .UnityLogo  {
     position: absolute;
-    bottom: 10px; /* align with .title-bar bottom */
-    right: 12px;  /* place in right-bottom corner inside .portfolio-content */
+    bottom: 10px;
+    right: 12px;
     width: 32px;
     height: 32px;
     display: inline-block;
     border-radius: 50%;
     overflow: hidden;
     object-fit: cover;
-    padding: 6px; /* creates inner space for blurred ring */
+    padding: 6px;
     background: rgba(0, 0, 0, 0.35);
     -webkit-backdrop-filter: blur(6px);
     backdrop-filter: blur(6px);
@@ -957,17 +858,17 @@ width: 100%;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
     z-index: 5;
 }
+
 .UnityLogo:hover {
     transform: translateY(-3px) scale(1.02);
     box-shadow: 0 0px 20px rgba(0,0,0,0.3), 0 0 5px 0px rgba(0, 0, 0, 0.1);
 }
 
-/* Unreal logo (source: 3000x3000) - same visual treatment but optimized for large original */
 .UnrealLogo {
     position: absolute;
     bottom: 9px;
     right: 12px;
-    width: 35px;             /* visible size on page */
+    width: 35px;
     height: 35px;
     display: inline-block;
     border-radius: 50%;
@@ -980,12 +881,11 @@ width: 100%;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
     z-index: 5;
     will-change: transform;
-    image-rendering: auto; /* let the browser handle downscaling smoothly */
+    image-rendering: auto;
     background-size: cover;
     background-position: center;
 }
 
-/* If you use an <img> inside the container, ensure it scales crisply */
 .UnrealLogo img {
     width: 100%;
     height: 100%;
@@ -996,14 +896,19 @@ width: 100%;
     backface-visibility: hidden;
 }
 
-/* hover match */
 .UnrealLogo:hover {
     transform: translateY(-3px) scale(1.02);
     box-shadow: 0 0px 20px rgba(0,0,0,0.3), 0 0 5px 0px rgba(0, 0, 0, 0.1);
 }
-/*---------------------------------*/
 
-/* Blur Bar Filter Styles */
+/*--------------------------------------------------------------
+# Filter Bar
+--------------------------------------------------------------*/
+.filter-bar-container {
+    display: flex;
+    justify-content: center;
+}
+
 .portfolio-filters-bar {
     position: relative;
     display: inline-flex;
@@ -1031,6 +936,7 @@ width: 100%;
     z-index: 2;
     white-space: nowrap;
     border-radius: 24px;
+    color: rgba(255, 255, 255, 0.65);
 }
 
 .portfolio-filters-bar li:hover {
@@ -1040,11 +946,20 @@ width: 100%;
 
 .portfolio-filters-bar li.filter-active {
     color: #000000;
-    border-bottom: none;
-    padding-bottom: 10px;
+    font-weight: 600;
 }
 
-/* Mini Rounded Slider Bar */
+.portfolio-filters-bar li a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+}
+
+.portfolio-filters-bar li:last-child {
+    margin-right: 0;
+}
+
+/* Slider Bar */
 .slider-bar {
     position: absolute;
     top: 6px;
@@ -1064,36 +979,47 @@ width: 100%;
     will-change: transform, left, width;
 }
 
-/* Dragging state */
 .portfolio-filters-bar.dragging .slider-bar {
     transition: all 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     box-shadow:
             0 4px 16px rgba(208, 255, 0, 0.4),
             inset 0 1px 0 rgba(255, 255, 255, 0.3);
-}
-
-/* Stretch effect during drag */
-.portfolio-filters-bar.dragging .slider-bar {
     transform: scaleX(1.08);
 }
 
-/* About link special styling */
-.portfolio-filters-bar li a {
-    color: inherit;
-    text-decoration: none;
-    display: block;
+.slider-bar::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: 24px;
+    background: rgba(208, 255, 0, 0.2);
+    filter: blur(6px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
 }
 
-.portfolio-filters-bar li:last-child {
-    margin-right: 0;
+.portfolio-filters-bar:hover .slider-bar::before {
+    opacity: 1;
 }
 
-/* When the About link is active */
-.portfolio-filters-bar li:has(a).filter-active a {
-    color: #000000;
+.portfolio-filters-bar li:active {
+    transform: scale(0.97);
 }
 
-/* Responsive adjustments */
+@keyframes smoothStretch {
+    0%, 100% {
+        transform: scaleX(1);
+    }
+    50% {
+        transform: scaleX(1.12);
+    }
+}
+
+.slider-bar.animating {
+    animation: smoothStretch 0.35s ease-in-out;
+}
+
 @media (max-width: 768px) {
     .portfolio-filters-bar {
         flex-wrap: nowrap;
@@ -1121,55 +1047,9 @@ width: 100%;
     }
 }
 
-/* Subtle glow on slider bar */
-.slider-bar::before {
-    content: '';
-    position: absolute;
-    inset: -1px;
-    border-radius: 24px;
-    background: rgba(208, 255, 0, 0.2);
-    filter: blur(6px);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: -1;
-}
-
-.portfolio-filters-bar:hover .slider-bar::before {
-    opacity: 1;
-}
-
-/* Smooth text color transition */
-.portfolio-filters-bar li {
-    color: rgba(255, 255, 255, 0.65);
-}
-
-.portfolio-filters-bar li.filter-active {
-    color: #000000;
-    font-weight: 600;
-}
-
-/* Touch feedback */
-.portfolio-filters-bar li:active {
-    transform: scale(0.97);
-}
-
-/* Smooth stretch animation */
-@keyframes smoothStretch {
-    0%, 100% {
-        transform: scaleX(1);
-    }
-    50% {
-        transform: scaleX(1.12);
-    }
-}
-
-.slider-bar.animating {
-    animation: smoothStretch 0.35s ease-in-out;
-}
-
-/*---------------------==================*/
-
-/* Enhanced Social Links Container */
+/*--------------------------------------------------------------
+# Header Social Links
+--------------------------------------------------------------*/
 .header-social-links {
     display: flex;
     align-items: center;
@@ -1183,7 +1063,6 @@ width: 100%;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Individual Social Link Styling */
 .header-social-links a {
     position: relative;
     display: flex;
@@ -1200,7 +1079,6 @@ width: 100%;
     white-space: nowrap;
 }
 
-/* Icon styling */
 .header-social-links a i {
     font-size: 18px;
     transition: transform 0.3s ease;
@@ -1208,7 +1086,6 @@ width: 100%;
     position: relative;
 }
 
-/* Resume text styling */
 .header-social-links a .resume-text {
     font-size: 14px;
     font-weight: 500;
@@ -1216,7 +1093,6 @@ width: 100%;
     position: relative;
 }
 
-/* Hover background effect */
 .header-social-links a::before {
     content: '';
     position: absolute;
@@ -1232,7 +1108,6 @@ width: 100%;
     opacity: 1;
 }
 
-/* Hover effects */
 .header-social-links a:hover {
     color: #ffffff;
     transform: translateY(-2px);
@@ -1243,37 +1118,30 @@ width: 100%;
     transform: scale(1.15);
 }
 
-/* Active/Click effect */
 .header-social-links a:active {
     transform: translateY(0px) scale(0.95);
 }
 
-/* Specific icon colors on hover */
 .header-social-links a:hover:nth-child(1) {
-    /* Twitter/X */
     color: #ffffff;
     box-shadow: 0 4px 16px rgba(255, 255, 255, 0.3);
 }
 
 .header-social-links a:hover:nth-child(2) {
-    /* LinkedIn */
     color: #0A66C2;
     box-shadow: 0 4px 16px rgba(10, 102, 194, 0.3);
 }
 
 .header-social-links a:hover:nth-child(3) {
-    /* Instagram */
     color: #E4405F;
     box-shadow: 0 4px 16px rgba(228, 64, 95, 0.3);
 }
 
 .header-social-links a:hover:nth-child(4) {
-    /* Resume */
     color: #d0ff00;
     box-shadow: 0 4px 16px rgba(208, 255, 0, 0.3);
 }
 
- Resume button special styling
 .header-social-links a:last-child {
     padding: 10px 16px;
     background: rgba(208, 255, 0, 0.1);
@@ -1285,7 +1153,6 @@ width: 100%;
     border-color: rgba(208, 255, 0, 0.4);
 }
 
-/* Separator between icons (optional subtle divider) */
 .header-social-links a:not(:last-child)::after {
     content: '';
     position: absolute;
@@ -1303,7 +1170,6 @@ width: 100%;
     opacity: 1;
 }
 
-/* Mobile responsive */
 @media (max-width: 768px) {
     .header-social-links {
         gap: 4px;
@@ -1338,7 +1204,6 @@ width: 100%;
     }
 }
 
-/* Smooth entrance animation on page load */
 .header-social-links a {
     animation: slideInRight 0.5s ease-out backwards;
 }
@@ -1357,4 +1222,66 @@ width: 100%;
         opacity: 1;
         transform: translateX(0);
     }
+}
+
+/*--------------------------------------------------------------
+# About Section Styling (Inline)
+--------------------------------------------------------------*/
+.profile-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+.spotlight-effect {
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 70%);
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 1;
+    animation: spotlight 2s infinite;
+}
+
+@keyframes spotlight {
+    0%, 100% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.about-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 3rem;
+    border-radius: 15px;
+    margin-top: 2rem;
+}
+
+.about-content h3 {
+    color: #bce802;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.about-content ul li {
+    padding: 0.5rem 0;
+}
+
+.about-content .row ul li {
+    display: flex;
+    align-items: center;
+}
+
+.about-content .row ul li i {
+    margin-right: 0.5rem;
 }

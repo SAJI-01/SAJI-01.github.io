@@ -399,4 +399,26 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-/*--------------------------------*/
+/*-----------Force Isotope Layout on Page Load ---------------------*/
+document.addEventListener('DOMContentLoaded', function() {
+    // Wait for images to load before initializing layout
+    const container = document.querySelector('.isotope-container');
+    if (container) {
+        // Small delay to ensure everything is loaded
+        setTimeout(function() {
+            // Trigger Isotope layout
+            if (typeof Isotope !== 'undefined') {
+                const iso = new Isotope(container, {
+                    itemSelector: '.portfolio-item',
+                    layoutMode: 'masonry',
+                    filter: '.Games, .ArtWorks, .Projects'
+                });
+
+                // Force layout after initialization
+                setTimeout(function() {
+                    iso.layout();
+                }, 100);
+            }
+        }, 200);
+    }
+});
