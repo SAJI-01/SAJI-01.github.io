@@ -314,26 +314,45 @@ document.addEventListener('DOMContentLoaded', function() {
         const touch = e.changedTouches ? e.changedTouches[0] : e;
         const endX = touch.clientX - rect.left;
 
-        // Find closest filter and activate it
         const closestIndex = findClosestFilter(endX);
+        const closestItem = filterItems[closestIndex];
 
         // Reset transforms
         filterItems.forEach(item => {
             item.style.transform = '';
         });
 
+        // If the nearest tab is a navigation link → go to that page
+        if (closestItem.classList.contains('nav-link')) {
+            const link = closestItem.querySelector('a');
+            if (link) {
+                window.location.href = link.getAttribute('href');
+            }
+            return;
+        }
+
+        // Otherwise filter normally
         setActiveFilter(closestIndex);
     }
+
 
     // Click handler for direct selection
     filterItems.forEach((item, index) => {
         item.addEventListener('click', (e) => {
-            if (!isDragging) {
-                e.preventDefault();
-                setActiveFilter(index);
+            if (isDragging) return; // prevent click during drag
+
+            if (item.classList.contains('nav-link')) {
+                // Let HTML link work normally
+                return;
             }
+
+            e.preventDefault();
+            setActiveFilter(index);
         });
     });
+
+
+
 
     // Event listeners
     filterContainer.addEventListener('mousedown', handleStart);
