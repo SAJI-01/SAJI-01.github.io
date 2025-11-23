@@ -112,13 +112,13 @@ h6 {
 --------------------------------------------------------------*/
 .header {
     color: var(--default-color);
-    background: rgba(0, 0, 0, 0.85);
-    backdrop-filter: blur(20px);
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(25px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     -webkit-backdrop-filter: blur(20px);
     padding: 16px 0;
     transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
     z-index: 997;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
 
@@ -276,7 +276,7 @@ h6 {
     left: 0;
     right: 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent 0%, rgba(208, 255, 0, 0.3) 50%, transparent 100%);
+    background: linear-gradient(90deg, transparent 0%, rgba(202, 248, 0, 0.63) 50%, transparent 100%);
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -425,7 +425,7 @@ h6 {
 --------------------------------------------------------------*/
 .page-title {
     color: var(--default-color);
-    background-color: var(--background-color);
+    background-color: rgba(0, 0, 0, 0);
     padding: 100px 0 20px 0;
     text-align: center;
     position: relative;
@@ -465,17 +465,10 @@ h6 {
 section,
 .section {
     color: var(--default-color);
-    background-color: var(--background-color);
+    background-color: transparent;
     padding: 60px 0;
     scroll-margin-top: 90px;
     overflow: clip;
-}
-
-@media (max-width: 1199px) {
-    section,
-    .section {
-        scroll-margin-top: 66px;
-    }
 }
 
 /*--------------------------------------------------------------
@@ -513,19 +506,31 @@ section,
     position: relative;
     overflow: hidden;
     border-radius: 14px;
+    border: 2px solid transparent;
+    transition: border-color .3s ease-out, transform .1s ease-in;
 }
 
 .portfolio .portfolio-content img {
     transition: 0.5s;
 }
 
-.portfolio .portfolio-content:hover img {
-    transform: scale(1.2);
+.portfolio .portfolio-content:hover {
+    border-color: rgb(209, 255, 0);
+    transform: translateY(-5px);
+    box-shadow: 0 0px 25px rgba(208, 255, 0, 0.37);
 }
+
+.portfolio .portfolio-content:hover img {
+    transform: scale(1.05);
+}
+
 
 /*--------------------------------------------------------------
 # Portfolio Details Section
 --------------------------------------------------------------*/
+.portfolio-details .portfolio-details-slider {
+border-radius: 14px;
+}
 .portfolio-details .portfolio-details-slider img {
     width: 100%;
 }
@@ -547,8 +552,9 @@ section,
 }
 
 .portfolio-details .portfolio-info {
-    background-color: var(--surface-color);
+    background-color: rgba(0, 0, 0, 0.2);
     padding: 30px;
+    border-radius: 14px;
     box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
 }
 
@@ -583,72 +589,6 @@ section,
 .portfolio-details .portfolio-description p {
     padding: 0;
     color: color-mix(in srgb, var(--default-color), transparent 30%);
-}
-
-/*--------------------------------------------------------------
-# Service Details Section
---------------------------------------------------------------*/
-.service-details .services-list {
-    background-color: var(--surface-color);
-    padding: 10px 30px;
-    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-    margin-bottom: 20px;
-}
-
-.service-details .services-list a {
-    display: block;
-    line-height: 1;
-    padding: 8px 0 8px 15px;
-    border-left: 3px solid color-mix(in srgb, var(--default-color), transparent 70%);
-    margin: 20px 0;
-    color: color-mix(in srgb, var(--default-color), transparent 20%);
-    transition: 0.3s;
-}
-
-.service-details .services-list a.active {
-    color: var(--heading-color);
-    font-weight: 700;
-    border-color: var(--accent-color);
-}
-
-.service-details .services-list a:hover {
-    border-color: var(--accent-color);
-}
-
-.service-details .services-img {
-    margin-bottom: 20px;
-}
-
-.service-details h3 {
-    font-size: 26px;
-    font-weight: 700;
-}
-
-.service-details h4 {
-    font-size: 20px;
-    font-weight: 700;
-}
-
-.service-details p {
-    font-size: 15px;
-}
-
-.service-details ul {
-    list-style: none;
-    padding: 0;
-    font-size: 15px;
-}
-
-.service-details ul li {
-    padding: 5px 0;
-    display: flex;
-    align-items: center;
-}
-
-.service-details ul i {
-    font-size: 20px;
-    margin-right: 8px;
-    color: var(--accent-color);
 }
 
 /*--------------------------------------------------------------
@@ -761,20 +701,32 @@ section,
 html, body {
     height: 100%;
     margin: 0;
+    /*background: linear-gradient(135deg, #000000 0%, #09000c 50%, #000000 100%);*/
+    background: black;
+    background-size: 400% 400%;
+   /* animation: gradientShift 15s ease infinite;*/
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .main {
     min-height: 100vh;
-    background-color: #000000;
+    background-color: transparent;
 }
 
 .portfolio {
     position: relative;
     overflow: hidden;
-}
-
-.isotope-container {
-    height: auto;
 }
 
 /*--------------------------------------------------------------
@@ -1284,4 +1236,177 @@ html, body {
 
 .about-content .row ul li i {
     margin-right: 0.5rem;
+}
+/*------------------------------------*/
+/*------------------------------------*/
+/* Epic Space Background */
+.main::before,
+.main::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Animated Nebula Clouds */
+.main::before {
+    background:
+            radial-gradient(ellipse at 20% 30%, rgba(138, 43, 226, 0.15) 0%, transparent 50%),
+            radial-gradient(ellipse at 80% 70%, rgba(75, 0, 130, 0.12) 0%, transparent 50%),
+            radial-gradient(ellipse at 50% 50%, rgba(208, 255, 0, 0.08) 0%, transparent 60%);
+    background-size: 150% 150%;
+    animation: nebulaFloat 20s ease-in-out infinite;
+}
+
+/* Twinkling Stars Layer 1 */
+.main::after {
+    background-image:
+            radial-gradient(2px 2px at 15% 25%, white, transparent),
+            radial-gradient(1px 1px at 85% 15%, white, transparent),
+            radial-gradient(2px 2px at 45% 65%, white, transparent),
+            radial-gradient(1px 1px at 70% 85%, white, transparent),
+            radial-gradient(2px 2px at 25% 45%, rgba(208, 255, 0, 0.8), transparent),
+            radial-gradient(1px 1px at 90% 50%, white, transparent),
+            radial-gradient(2px 2px at 10% 90%, white, transparent),
+            radial-gradient(1px 1px at 60% 30%, white, transparent),
+            radial-gradient(2px 2px at 35% 10%, white, transparent),
+            radial-gradient(1px 1px at 50% 75%, white, transparent),
+            radial-gradient(2px 2px at 80% 40%, rgba(138, 43, 226, 0.6), transparent),
+            radial-gradient(1px 1px at 20% 60%, white, transparent),
+            radial-gradient(2px 2px at 95% 80%, white, transparent),
+            radial-gradient(1px 1px at 5% 35%, white, transparent),
+            radial-gradient(2px 2px at 65% 55%, white, transparent);
+    background-size: 200% 200%;
+    background-position: 0% 0%;
+    animation: starsTwinkle 8s ease-in-out infinite;
+}
+
+/* Shooting Stars */
+.portfolio::before,
+.portfolio::after {
+    content: '';
+    position: fixed;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 6px 2px rgba(255, 255, 255, 0.8);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.portfolio::before {
+    top: -50px;
+    right: 20%;
+    animation: shootingStar1 3s ease-in infinite;
+}
+
+.portfolio::after {
+    top: -50px;
+    right: 70%;
+    animation: shootingStar2 5s ease-in infinite;
+    animation-delay: 2s;
+}
+
+/* Animations */
+@keyframes nebulaFloat {
+    0%, 100% {
+        background-position: 0% 0%;
+        opacity: 0.4;
+    }
+    50% {
+        background-position: 100% 100%;
+        opacity: 0.6;
+    }
+}
+
+@keyframes starsTwinkle {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    25% {
+        opacity: 0.5;
+        transform: scale(0.95);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.1);
+    }
+    75% {
+        opacity: 0.6;
+        transform: scale(0.98);
+    }
+}
+
+@keyframes shootingStar1 {
+    0% {
+        transform: translate(0, 0) rotate(-45deg);
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-300px, 300px) rotate(-45deg);
+        opacity: 0;
+    }
+}
+
+@keyframes shootingStar2 {
+    0% {
+        transform: translate(0, 0) rotate(-45deg);
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-400px, 400px) rotate(-45deg);
+        opacity: 0;
+    }
+}
+
+/* Particle Stars (extra layer) */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+            radial-gradient(1px 1px at 10% 10%, rgba(255, 255, 255, 0.3), transparent),
+            radial-gradient(1px 1px at 30% 20%, rgba(255, 255, 255, 0.3), transparent),
+            radial-gradient(1px 1px at 50% 40%, rgba(255, 255, 255, 0.3), transparent),
+            radial-gradient(1px 1px at 70% 30%, rgba(255, 255, 255, 0.3), transparent),
+            radial-gradient(1px 1px at 90% 50%, rgba(255, 255, 255, 0.3), transparent),
+            radial-gradient(1px 1px at 20% 70%, rgba(255, 255, 255, 0.3), transparent),
+            radial-gradient(1px 1px at 40% 80%, rgba(255, 255, 255, 0.3), transparent),
+            radial-gradient(1px 1px at 60% 90%, rgba(255, 255, 255, 0.3), transparent),
+            radial-gradient(1px 1px at 80% 70%, rgba(255, 255, 255, 0.3), transparent),
+            radial-gradient(1px 1px at 25% 50%, rgba(255, 255, 255, 0.3), transparent);
+    background-size: 300% 300%;
+    animation: particleDrift 15s linear infinite;
+    z-index: 0;
+    pointer-events: none;
+}
+
+@keyframes particleDrift {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+/* Make sure main content is above stars */
+.main > * {
+    position: relative;
+    z-index: 1;
 }
